@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Kanji Grammar Quiz</title>
+    <style>
+        /* พื้นฐาน */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('image/istockphoto-1437172522-612x612.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .logo {
+            text-align: center;
+            margin: 20px auto;
+        }
+    
+        .logo img {
+            max-width: 150px;
+            width: 100%;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    
+        .logo img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.7);
+        }
+    
+        .quiz-container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 90%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .quiz-container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 90%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .question-jp {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question-th {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .options button {
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            flex: 1 1 auto;
+            max-width: 200px;
+        }
+
+        .options button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .timer {
+            font-size: 1.2em;
+            color: #ff5733;
+        }
+
+        /* Media Queries สำหรับหน้าจอขนาดเล็ก */
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 15px;
+            }
+
+            .question-jp {
+                font-size: 1.2em;
+            }
+
+            .question-th {
+                font-size: 0.9em;
+            }
+
+            .options button {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .timer {
+                font-size: 1em;
+            }
+
+            .logo img {
+                max-width: 120px;
+            }
+        }
+
+        /* Media Queries สำหรับหน้าจอขนาดใหญ่มาก */
+        @media (min-width: 1200px) {
+            .quiz-container {
+                max-width: 50%;
+            }
+
+            .logo img {
+                max-width: 200px;
+            }
+
+            .question-jp {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="image/logo_no_bg.png" alt="Logo">
+    </div>
+    <div class="quiz-container">
+        <div id="timer" class="timer">เวลา: 15 วินาที</div>
+        <div id="question" class="question">
+            <div id="question-jp" class="question-jp">Loading...</div>
+            <div id="question-th" class="question-th">Loading...</div>
+        </div>
+        <div id="options" class="options"></div>
+        <div id="result" class="result"></div>
+        <button id="next-btn" style="display: none;">คำถามถัดไป</button>
+    </div>
+    <audio id="correct-sound" src="audio/applause_cheer.mp3"></audio>
+    <audio id="wrong-sound" src="audio/buzzerwav.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
