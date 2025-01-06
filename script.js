@@ -1,5 +1,11 @@
 const quizData = [
     {
+        questionJP: "目",
+        questionTH: "เลือกคำอ่านให้ถูกต้อง:",
+        options: ["ひ", "みみ", "あたま", "め"],
+        answer: "め"
+    },
+    {
         questionJP: "山",
         questionTH: "เลือกคำอ่านให้ถูกต้อง:",
         options: ["かわ", "やま", "うみ", "もり"],
