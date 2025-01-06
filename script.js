@@ -231,7 +231,7 @@ const quizData = [
         questionJP: "遠い",
         questionTH: "เลือกคำอ่านให้ถูกต้อง:",
         options: ["とおい", "おおい", "まちがい", "もんだい"],
-        answer: "なか"
+        answer: "とおい"
     },
     {
         questionJP: "食べる",
@@ -279,7 +279,7 @@ const quizData = [
         questionJP: "兄",
         questionTH: "เลือกคำอ่านให้ถูกต้อง:",
         options: ["あれ", "あば", "あね", "あに"],
-        answer: "はは"
+        answer: "あに"
     },
     {
         questionJP: "姉",
@@ -291,7 +291,7 @@ const quizData = [
         questionJP: "妹",
         questionTH: "เลือกคำอ่านให้ถูกต้อง:",
         options: ["いも", "いなか", "あね", "いもうと"],
-        answer: "あね"
+        answer: "いもうと"
     },
     {
         questionJP: "弟",
@@ -352,6 +352,24 @@ const quizData = [
         questionTH: "เลือกคำอ่านให้ถูกต้อง:",
         options: ["じゅうがつ", "じょうがつ", "ぎょうがつ", "くがつ"],
         answer: "じゅうがつ"
+    },
+    {
+        questionJP: "問題",
+        questionTH: "เลือกคำอ่านให้ถูกต้อง:",
+        options: ["もんたい", "もんかい", "もんだい", "もんがい"],
+        answer: "もんだい"
+    },
+    {
+        questionJP: "美味しい",
+        questionTH: "เลือกคำอ่านให้ถูกต้อง:",
+        options: ["おいし", "おおしい", "おいしい", "おかしい"],
+        answer: "おいしい"
+    },
+    {
+        questionJP: "楽しい",
+        questionTH: "เลือกคำอ่านให้ถูกต้อง:",
+        options: ["かなしい", "おおしい", "おかしい", "たのしい"],
+        answer: "たのしい"
     }
     
 ];
